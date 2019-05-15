@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: 16px 'Orbitron', sans-serif;;
+}
+
+#content {
+    height: 100%;
+    margin: 200px;
+}
+
+.digital_clock {
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #333;
+    width: 360px;
+    border: 10px solid tan;
+    margin: 0 auto;
+}
+
+.digital_clock span {
+    position: relative;
+
+    color: #e74c3c;
+    text-shadow: 0 0 15px rgba(231, 76, 60, 0.4);
+    line-height: 1.75;
+    font-size: 46px;
+}
+
+.classic_clock, .classic_clock2 {
+    position: relative;
+    display: block;
+    background: #478FDD;
+    width: 120px;
+    height: 120px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #ccc;
+    margin: 20px auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #000;
+}
+
+.center {
+    position: absolute;
+    left: 58px;
+    top: 57px;
+    content: "";
+    padding: 3px;
+    border-radius: 3px;
+    background: #000;
+    z-index: 5;
+}
+
+.second, .minute, .hour, .l1, .l2, .l3, .l4, .l5, .l6 {
+    position: absolute;
+    display: block;
+    content: "";
+    padding: 60px 1px;
+}
+
+.second:after, .minute:after, .hour:after {
+    position: absolute;
+    left: 0px;
+    content: "";
+}
+
+.second {
+    left: 60px;
+    z-index: 4;
+}
+
+.second:after {
+    top: 20px;
+    padding: 20px 1px 20px 0px;
+    background: #000;
+}
+
+.minute {
+    left: 59px;
+    z-index: 3;
+}
+
+.minute:after {
+    top: 30px;
+    padding: 15px 1px;
+    background: #F00;
+}
+
+.hour {
+    left: 59px;
+    z-index: 2;
+}
+
+.hour:after {
+    top: 40px;
+    padding: 10px 2px 10px 1px;
+    border-radius: 2px 2px 0 0;
+    background: #FF0;
+}
+
+.clock {
+    position: absolute;
+    left: 43px;
+    top: 70px;
+    font-size: 10px;
+}
+
+.l1 {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+.l2 {
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+}
+
+.l3 {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+}
+
+.l4 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+
+.l5 {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+}
+
+.l6 {
+    -webkit-transform: rotate(150deg);
+    -moz-transform: rotate(150deg);
+    -o-transform: rotate(150deg);
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6 {
+    left: 59px;
+    z-index: 5;
+}
+
+.l1:before, .l1:after, .l2:before, .l2:after, .l3:before, .l3:after, .l4:before, .l4:after, .l5:before, .l5:after, .l6:before, .l6:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    padding: 5px 2px 5px 1px;
+    background: #000;
+}
+
+.l1::before, .l2::before, .l3::before, .l4::before, .l5::before, .l6::before {
+    top: 5px;
+}
+
+.l1::after, .l2::after, .l3::after, .l4::after, .l5::after, .l6::after {
+    bottom: 5px;
+}
+
+.ln1:before, .ln2:before, .ln3:before, .ln4:before, .ln5:before, .ln6:before,
+.ln7:before, .ln8:before, .ln9:before, .ln10:before, .ln11:before, .ln12:before,
+.ln13:before, .ln14:before, .ln15:before, .ln16:before, .ln17:before, .ln18:before,
+.ln19:before, .ln20:before, .ln21:before, .ln22:before, .ln23:before, .ln24:before,
+.ln25:before, .ln26:before, .ln27:before, .ln28:before, .ln29:before, .ln30:before {
+    padding: 5px 1px 5px 0;
+    left: 0px;
+    top: 0px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+.ln1:after, .ln2:after, .ln3:after, .ln4:after, .ln5:after, .ln6:after,
+.ln7:after, .ln8:after, .ln9:after, .ln10:after, .ln11:after, .ln12:after,
+.ln13:after, .ln14:after, .ln15:after, .ln16:after, .ln17:after, .ln18:after,
+.ln19:after, .ln20:after, .ln21:after, .ln22:after, .ln23:after, .ln24:after,
+.ln25:after, .ln26:after, .ln27:after, .ln28:after, .ln29:after, .ln30:after {
+    padding: 5px 1px 5px 0;
+    left: 0px;
+    bottom: 0px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    content: "";
+}
+
+.colon {
+    animation: colon 1s infinite;
+}
+
+@keyframes colon {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.1;
+    }
+}
